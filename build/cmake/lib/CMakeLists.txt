@@ -204,7 +204,7 @@ if (ZSTD_BUILD_SHARED)
     set_target_properties(
             libzstd_shared
             PROPERTIES
-            OUTPUT_NAME zstd
+            OUTPUT_NAME libzstd
             VERSION ${zstd_VERSION_MAJOR}.${zstd_VERSION_MINOR}.${zstd_VERSION_PATCH}
             SOVERSION ${zstd_VERSION_MAJOR})
 endif ()
@@ -214,7 +214,7 @@ if (ZSTD_BUILD_STATIC)
             libzstd_static
             PROPERTIES
             POSITION_INDEPENDENT_CODE On
-            OUTPUT_NAME ${STATIC_LIBRARY_BASE_NAME})
+            OUTPUT_NAME libzstd_a)
 endif ()
 
 # pkg-config
